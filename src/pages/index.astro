@@ -1,0 +1,514 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rigby & Company | Commercial Appraisal Services">
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/hero.jpg"
+        alt="Salt Lake City skyline with Utah State Capitol and Wasatch Mountains"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/50"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        70+ Years of Combined<br />Commercial Appraisal Experience
+      </h1>
+      <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+        Expert property valuation services throughout Utah and the Intermountain West
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 btn-hover">
+          Request an Appraisal
+        </a>
+        <a href="tel:+18016823729" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 btn-hover">
+          Call: (801) 682-3729
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">About Rigby & Company</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Rigby & Company is a local, family-owned commercial appraisal firm serving Utah and the Intermountain West.
+          We provide quality and prompt appraisal services on all types of commercial, retail, industrial, and special purpose properties.
+          The education and experience of our staff is not only extensive, but varied, providing a strong foundation
+          for the different assignments and specialized needs of our clientele.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 stagger-children">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Trusted Expertise</h3>
+          <p class="text-gray-600">Recognized professionals with MAI designations and expert witness experience in local and district courts.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Commercial Focus</h3>
+          <p class="text-gray-600">Specializing exclusively in commercial properties including retail, industrial, office, and special use.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Regional Knowledge</h3>
+          <p class="text-gray-600">Deep understanding of the Utah and Intermountain West markets from decades of local experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Property Showcase Section -->
+  <section class="py-20 lg:py-28 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Properties We Appraise</h2>
+        <p class="text-lg text-gray-600">
+          Expertise across all major commercial property types
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 stagger-children">
+        <!-- Office - Large Left -->
+        <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+            alt="Modern office building"
+            class="w-full h-full object-cover min-h-[300px] md:min-h-[400px] transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <h3 class="text-2xl font-bold text-white mb-1">Office</h3>
+            <p class="text-gray-200 text-sm">Single & multi-tenant buildings</p>
+          </div>
+        </div>
+
+        <!-- Retail - Top Right -->
+        <div class="col-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80"
+            alt="Retail shopping center"
+            class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+            <h3 class="text-xl font-bold text-white mb-1">Retail</h3>
+            <p class="text-gray-200 text-sm hidden md:block">Shopping centers & storefronts</p>
+          </div>
+        </div>
+
+        <!-- Industrial - Bottom Middle -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80"
+            alt="Industrial warehouse"
+            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h3 class="text-lg font-bold text-white">Industrial</h3>
+          </div>
+        </div>
+
+        <!-- Land -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&q=80"
+            alt="Development land"
+            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h3 class="text-lg font-bold text-white">Land</h3>
+          </div>
+        </div>
+
+        <!-- Multifamily - Full Width Bottom -->
+        <div class="col-span-2 md:col-span-4 relative group overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80"
+            alt="Multifamily apartment complex"
+            class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Multifamily</h3>
+            <p class="text-gray-200 text-sm">Apartment complexes & residential developments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Services</h2>
+        <p class="text-lg text-gray-600">
+          We provide high-quality appraisal and consulting services personalized for your unique needs.
+          Available to take your appraisal request 24/7.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+        <!-- Service Cards -->
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Office Buildings</h3>
+          <p class="text-gray-600 text-sm">Single and multi-tenant office properties, medical office buildings, and professional complexes.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Retail Properties</h3>
+          <p class="text-gray-600 text-sm">Shopping centers, strip malls, standalone retail, and mixed-use retail developments.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Industrial & Warehouse</h3>
+          <p class="text-gray-600 text-sm">Manufacturing facilities, distribution centers, flex space, and industrial parks.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Multi-Family & Developments</h3>
+          <p class="text-gray-600 text-sm">Apartment complexes, high-density residential developments, and residential subdivision projects.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Special Purpose</h3>
+          <p class="text-gray-600 text-sm">Assisted living facilities, medical centers, churches, schools, and unique-use properties.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Land & Development</h3>
+          <p class="text-gray-600 text-sm">Commercial land, development sites, and subdivision analysis.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Condemnation & Litigation</h3>
+          <p class="text-gray-600 text-sm">Expert witness testimony, eminent domain cases, and litigation support services.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Conservation Easements</h3>
+          <p class="text-gray-600 text-sm">Valuation of conservation easements and related land preservation interests.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Financing & Lending</h3>
+          <p class="text-gray-600 text-sm">Appraisals for banks, credit unions, and other lending institutions for loan origination and refinancing.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Tax & Estate Planning</h3>
+          <p class="text-gray-600 text-sm">Property valuations for tax appeals, estate planning, gift tax, and IRS reporting purposes.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Market & Rent Analysis</h3>
+          <p class="text-gray-600 text-sm">Market studies, rent analysis, and feasibility studies for investment decisions and development projects.</p>
+        </div>
+      </div>
+
+      <!-- Important Note -->
+      <div class="mt-12 bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-3xl mx-auto">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Commercial Properties Only</h4>
+            <p class="text-gray-600 text-sm">
+              We specialize exclusively in commercial appraisals and do not provide single-family residential appraisal services.
+              However, we do appraise residential developments, multi-family properties, and high-density residential projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Team Section -->
+  <section id="team" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Team</h2>
+        <p class="text-lg text-gray-600">
+          Meet the experienced professionals behind Rigby & Company.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 stagger-children">
+        <!-- Larry -->
+        <div class="text-center">
+          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+              <span class="text-4xl text-gray-500 font-semibold">LR</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Larry Rigby, MAI</h3>
+          <p class="text-blue-700 font-medium mb-4">Principal Appraiser</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Larry has been involved in the appraisal industry for over 30 years, specializing in all types of commercial
+            properties including farm and ranch appraisals and conservation easements. Larry is also classified as an
+            expert witness in local and district courts.
+          </p>
+        </div>
+
+        <!-- Jeff -->
+        <div class="text-center">
+          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+              <span class="text-4xl text-gray-500 font-semibold">JR</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Jeff Rigby, MAI</h3>
+          <p class="text-blue-700 font-medium mb-4">Senior Appraiser</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Jeff has been appraising all types of commercial, industrial, and retail properties since 1998.
+          </p>
+        </div>
+
+        <!-- Chad -->
+        <div class="text-center">
+          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+              <span class="text-4xl text-gray-500 font-semibold">CR</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Chad Rigby, MAI</h3>
+          <p class="text-blue-700 font-medium mb-4">Senior Appraiser</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Chad has been appraising commercial, retail, and industrial properties throughout the Intermountain West
+            since 1992. He has performed extensive appraisal work in assisted living, medical facilities, condemnation,
+            and high-density residential. Chad has also served as an expert witness for various litigation assignments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Appraisal Institute -->
+      <div class="mt-16 text-center animate-on-scroll">
+        <p class="text-sm text-gray-500 mb-4">Proud Member of</p>
+        <div class="inline-block bg-white px-8 py-6 rounded-xl shadow-md">
+          <img
+            src="/images/appraisal institute-logo.svg"
+            alt="Appraisal Institute"
+            class="h-16 md:h-20 w-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 lg:py-28 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">Request an Appraisal</h2>
+        <p class="text-lg text-gray-300">
+          Contact us to discuss your commercial appraisal needs. We'll respond within one business day.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 stagger-children">
+        <!-- Contact Form -->
+        <div class="bg-white text-gray-900 p-8 rounded-2xl">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="property-type" class="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
+              <select
+                id="property-type"
+                name="property-type"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+              >
+                <option value="">Select a property type</option>
+                <option value="office">Office Building</option>
+                <option value="retail">Retail Property</option>
+                <option value="industrial">Industrial / Warehouse</option>
+                <option value="multifamily">Multi-Family / Apartments</option>
+                <option value="special">Special Purpose</option>
+                <option value="land">Land / Development</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Please describe the property and your appraisal needs..."
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 btn-hover"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-medium">Phone</p>
+                  <a href="tel:+18016823729" class="text-gray-300 hover:text-white transition-colors">
+                    (801) 682-3729
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-medium">Email</p>
+                  <p class="text-gray-300">
+                    <!-- PLACEHOLDER: New professional email -->
+                    info@rigbyandcompany.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-medium">Office</p>
+                  <p class="text-gray-300">
+                    1433 N 1075 W, Suite 104<br />
+                    Farmington, UT 84025
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="rounded-xl overflow-hidden h-64 lg:h-80">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.8234567890!2d-111.9134!3d41.0234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f7890abcdef%3A0x1234567890abcdef!2s1433%20N%201075%20W%20%23104%2C%20Farmington%2C%20UT%2084025!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Rigby & Company Office Location"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
