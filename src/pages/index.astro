@@ -17,18 +17,19 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content -mt-16 sm:mt-0">
+      <p class="text-blue-300 font-medium tracking-widest uppercase text-sm mb-4">Trusted Since 1984</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
         70+ Years of Combined<br />Commercial Appraisal Experience
       </h1>
-      <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+      <p class="text-xl sm:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
         Expert property valuation services throughout Utah and the Intermountain West
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 btn-hover">
+        <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 btn-hover shadow-lg shadow-blue-600/30">
           Request an Appraisal
         </a>
-        <a href="tel:+18016823729" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 btn-hover">
+        <a href="tel:+18016823729" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white/40 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-white/20 btn-hover">
           Call: (801) 682-3729
         </a>
       </div>
@@ -44,10 +45,10 @@ import Layout from '../layouts/Layout.astro';
 
 
   <!-- About Section -->
-  <section id="about" class="py-20 lg:py-28 bg-white">
+  <section id="about" class="py-24 lg:py-32 bg-white relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">About Rigby & Company</h2>
+      <div class="max-w-3xl mx-auto text-center mb-20 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 section-heading">About Rigby & Company</h2>
         <p class="text-lg text-gray-600 leading-relaxed">
           Rigby & Company is a local, family-owned commercial appraisal firm serving Utah and the Intermountain West.
           We provide quality and prompt appraisal services on all types of commercial, retail, industrial, and special purpose properties.
@@ -56,48 +57,61 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 stagger-children">
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      <div id="features-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 hide-scrollbar md:grid md:grid-cols-3 md:gap-10 md:overflow-visible md:px-0 md:pb-0 stagger-children" style="padding-left: calc(50vw - 140px); padding-right: calc(50vw - 140px);">
+        <style>
+          @media (min-width: 768px) {
+            #features-scroll { padding-left: 0 !important; padding-right: 0 !important; }
+          }
+        </style>
+        <div data-index="0" class="text-center p-6 snap-center shrink-0 w-[280px] md:w-auto bg-blue-50 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-8">
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 icon-container shadow-lg shadow-blue-100">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Trusted Expertise</h3>
-          <p class="text-gray-600">Recognized professionals with MAI designations and expert witness experience in local and district courts.</p>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Trusted Expertise</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">Recognized professionals with MAI designations and expert witness experience in local and district courts.</p>
         </div>
 
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <div data-index="1" class="text-center p-6 snap-center shrink-0 w-[280px] md:w-auto bg-blue-50 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-8">
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 icon-container shadow-lg shadow-blue-100">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Commercial Focus</h3>
-          <p class="text-gray-600">Specializing exclusively in commercial properties including retail, industrial, office, and special use.</p>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Commercial Focus</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">Specializing exclusively in commercial properties including retail, industrial, office, and special use.</p>
         </div>
 
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        <div data-index="2" class="text-center p-6 snap-center shrink-0 w-[280px] md:w-auto bg-blue-50 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-8">
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 icon-container shadow-lg shadow-blue-100">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Regional Knowledge</h3>
-          <p class="text-gray-600">Deep understanding of the Utah and Intermountain West markets from decades of local experience.</p>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Regional Knowledge</h3>
+          <p class="text-gray-600 text-sm md:text-base leading-relaxed">Deep understanding of the Utah and Intermountain West markets from decades of local experience.</p>
         </div>
       </div>
+
+      <!-- Dot indicators (mobile only) -->
+      <div class="flex justify-center gap-2 mt-4 md:hidden" id="features-dots">
+        <button class="w-2 h-2 rounded-full bg-blue-600 transition-colors" data-dot="0" aria-label="View first feature"></button>
+        <button class="w-2 h-2 rounded-full bg-gray-300 transition-colors" data-dot="1" aria-label="View second feature"></button>
+        <button class="w-2 h-2 rounded-full bg-gray-300 transition-colors" data-dot="2" aria-label="View third feature"></button>
+      </div>
     </div>
+
   </section>
 
 
   <!-- Property Showcase Section -->
-  <section class="py-20 lg:py-28 bg-gray-100">
+  <section class="py-24 lg:py-32 bg-gray-100 bg-pattern relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Properties We Appraise</h2>
-        <p class="text-lg text-gray-600">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 section-heading">Properties We Appraise</h2>
+        <p class="text-lg text-gray-600 mt-8">
           Expertise across all major commercial property types
         </p>
       </div>
@@ -107,7 +121,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Office - Large Left -->
         <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+            src="/images/office.jpg"
             alt="Modern office building"
             class="w-full h-full object-cover min-h-[300px] md:min-h-[400px] transition-transform duration-500 group-hover:scale-105"
           />
@@ -121,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Retail - Top Right -->
         <div class="col-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80"
+            src="/images/retail.jpg"
             alt="Retail shopping center"
             class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -135,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Industrial - Bottom Middle -->
         <div class="relative group overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80"
+            src="/images/industrial.jpg"
             alt="Industrial warehouse"
             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -148,7 +162,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Land -->
         <div class="relative group overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&q=80"
+            src="/images/land.jpg"
             alt="Development land"
             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -161,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Multifamily - Full Width Bottom -->
         <div class="col-span-2 md:col-span-4 relative group overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80"
+            src="/images/multifamily.jpg"
             alt="Multifamily apartment complex"
             class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -177,76 +191,144 @@ import Layout from '../layouts/Layout.astro';
 
 
   <!-- Services Section -->
-  <section id="services" class="py-20 lg:py-28 bg-gray-50">
+  <section id="services" class="py-24 lg:py-32 bg-gray-50 relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Services</h2>
-        <p class="text-lg text-gray-600">
+      <div class="max-w-3xl mx-auto text-center mb-20 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 section-heading">Our Services</h2>
+        <p class="text-lg text-gray-600 mt-8">
           We provide high-quality appraisal and consulting services personalized for your unique needs.
           Available to take your appraisal request 24/7.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-        <!-- Service Cards -->
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Office Buildings</h3>
-          <p class="text-gray-600 text-sm">Single and multi-tenant office properties, medical office buildings, and professional complexes.</p>
+      <!-- Mobile: Accordion / Desktop: Card Grid -->
+      <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:space-y-0 stagger-children" id="services-list">
+
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Office Buildings</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Office Buildings</h3>
+            <p class="text-gray-600 text-sm">Single and multi-tenant office properties, medical office buildings, and professional complexes.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Retail Properties</h3>
-          <p class="text-gray-600 text-sm">Shopping centers, strip malls, standalone retail, and mixed-use retail developments.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Retail Properties</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Retail Properties</h3>
+            <p class="text-gray-600 text-sm">Shopping centers, strip malls, standalone retail, and mixed-use retail developments.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Industrial & Warehouse</h3>
-          <p class="text-gray-600 text-sm">Manufacturing facilities, distribution centers, flex space, and industrial parks.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Industrial & Warehouse</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Industrial & Warehouse</h3>
+            <p class="text-gray-600 text-sm">Manufacturing facilities, distribution centers, flex space, and industrial parks.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Multi-Family & Developments</h3>
-          <p class="text-gray-600 text-sm">Apartment complexes, high-density residential developments, and residential subdivision projects.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Multi-Family & Developments</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Multi-Family & Developments</h3>
+            <p class="text-gray-600 text-sm">Apartment complexes, high-density residential developments, and residential subdivision projects.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Special Purpose</h3>
-          <p class="text-gray-600 text-sm">Assisted living facilities, medical centers, churches, schools, and unique-use properties.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Special Purpose</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Special Purpose</h3>
+            <p class="text-gray-600 text-sm">Assisted living facilities, medical centers, churches, schools, and unique-use properties.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Land & Development</h3>
-          <p class="text-gray-600 text-sm">Commercial land, development sites, and subdivision analysis.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Land & Development</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Land & Development</h3>
+            <p class="text-gray-600 text-sm">Commercial land, development sites, and subdivision analysis.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Condemnation & Litigation</h3>
-          <p class="text-gray-600 text-sm">Expert witness testimony, eminent domain cases, and litigation support services.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Condemnation & Litigation</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Condemnation & Litigation</h3>
+            <p class="text-gray-600 text-sm">Expert witness testimony, eminent domain cases, and litigation support services.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Conservation Easements</h3>
-          <p class="text-gray-600 text-sm">Valuation of conservation easements and related land preservation interests.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Conservation Easements</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Conservation Easements</h3>
+            <p class="text-gray-600 text-sm">Valuation of conservation easements and related land preservation interests.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Financing & Lending</h3>
-          <p class="text-gray-600 text-sm">Appraisals for banks, credit unions, and other lending institutions for loan origination and refinancing.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Financing & Lending</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Financing & Lending</h3>
+            <p class="text-gray-600 text-sm">Appraisals for banks, credit unions, and other lending institutions for loan origination and refinancing.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Tax & Estate Planning</h3>
-          <p class="text-gray-600 text-sm">Property valuations for tax appeals, estate planning, gift tax, and IRS reporting purposes.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Tax & Estate Planning</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Tax & Estate Planning</h3>
+            <p class="text-gray-600 text-sm">Property valuations for tax appeals, estate planning, gift tax, and IRS reporting purposes.</p>
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Market & Rent Analysis</h3>
-          <p class="text-gray-600 text-sm">Market studies, rent analysis, and feasibility studies for investment decisions and development projects.</p>
+        <div class="service-item bg-white rounded-xl md:rounded-2xl md:p-7 card-elevated md:card-hover md:card-accent">
+          <button class="service-toggle w-full text-left flex items-center justify-between p-4 md:hidden">
+            <span class="font-semibold text-gray-900">Market & Rent Analysis</span>
+            <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="service-content hidden px-4 pb-4 md:block md:p-0">
+            <h3 class="hidden md:block text-lg font-semibold text-gray-900 mb-2">Market & Rent Analysis</h3>
+            <p class="text-gray-600 text-sm">Market studies, rent analysis, and feasibility studies for investment decisions and development projects.</p>
+          </div>
         </div>
+
       </div>
 
       <!-- Important Note -->
-      <div class="mt-12 bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-3xl mx-auto">
+      <div class="mt-16 bg-blue-50 border border-blue-200 rounded-2xl p-8 max-w-3xl mx-auto">
         <div class="flex items-start gap-4">
           <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -263,63 +345,57 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+
   </section>
 
 
   <!-- Team Section -->
-  <section id="team" class="py-20 lg:py-28 bg-white">
+  <section id="team" class="py-24 lg:py-32 bg-white relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Team</h2>
-        <p class="text-lg text-gray-600">
+      <div class="max-w-3xl mx-auto text-center mb-20 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 section-heading">Our Team</h2>
+        <p class="text-lg text-gray-600 mt-8">
           Meet the experienced professionals behind Rigby & Company.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 lg:gap-12 stagger-children">
         <!-- Larry -->
-        <div class="text-center">
-          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <span class="text-4xl text-gray-500 font-semibold">LR</span>
+        <div class="text-center bg-gray-50 rounded-2xl p-8 card-hover">
+          <div class="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full mx-auto mb-6 overflow-hidden shadow-lg shadow-blue-100/50 ring-4 ring-white">
+            <div class="w-full h-full flex items-center justify-center">
+              <span class="text-3xl text-blue-700 font-bold">LR</span>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-1">Larry Rigby, MAI</h3>
-          <p class="text-blue-700 font-medium mb-4">Principal Appraiser</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Larry Rigby, MAI</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Larry has been involved in the appraisal industry for over 30 years, specializing in all types of commercial
-            properties including farm and ranch appraisals and conservation easements. Larry is also classified as an
-            expert witness in local and district courts.
-          </p>
-        </div>
-
-        <!-- Jeff -->
-        <div class="text-center">
-          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <span class="text-4xl text-gray-500 font-semibold">JR</span>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-1">Jeff Rigby, MAI</h3>
-          <p class="text-blue-700 font-medium mb-4">Senior Appraiser</p>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Jeff has been appraising all types of commercial, industrial, and retail properties since 1998.
+            Larry has been involved in the appraisal industry for over 40 years, specializing in a wide range of commercial property types, including farm and ranch appraisals, conservation easements, and charter schools and other educational facilities. He is also recognized as an expert witness in local and district courts.
           </p>
         </div>
 
         <!-- Chad -->
-        <div class="text-center">
-          <div class="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <span class="text-4xl text-gray-500 font-semibold">CR</span>
+        <div class="text-center bg-gray-50 rounded-2xl p-8 card-hover">
+          <div class="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full mx-auto mb-6 overflow-hidden shadow-lg shadow-blue-100/50 ring-4 ring-white">
+            <div class="w-full h-full flex items-center justify-center">
+              <span class="text-3xl text-blue-700 font-bold">CR</span>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-1">Chad Rigby, MAI</h3>
-          <p class="text-blue-700 font-medium mb-4">Senior Appraiser</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Chad Rigby, MAI</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Chad has been appraising commercial, retail, and industrial properties throughout the Intermountain West
-            since 1992. He has performed extensive appraisal work in assisted living, medical facilities, condemnation,
-            and high-density residential. Chad has also served as an expert witness for various litigation assignments.
+            Chad has been appraising commercial, retail, and industrial properties throughout the Intermountain West since 1992. His experience includes extensive work with assisted living facilities, medical properties, condemnation assignments, and high-density residential developments. He has also served as an expert witness in a variety of litigation matters.
+          </p>
+        </div>
+
+        <!-- Jeff -->
+        <div class="text-center bg-gray-50 rounded-2xl p-8 card-hover">
+          <div class="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full mx-auto mb-6 overflow-hidden shadow-lg shadow-blue-100/50 ring-4 ring-white">
+            <div class="w-full h-full flex items-center justify-center">
+              <span class="text-3xl text-blue-700 font-bold">JR</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Jeff Rigby, MAI</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Jeff brings over two decades of appraisal experience across the Intermountain West, with a focus on commercial, retail, and industrial property types. His experience also includes extensive land appraisal work of all types, including raw land, improved sites, and subdivisions. His practice further includes estate and trust appraisal work, ranging from smaller assignments to large, multi-property estate portfolios.
           </p>
         </div>
       </div>
@@ -340,18 +416,18 @@ import Layout from '../layouts/Layout.astro';
 
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 lg:py-28 bg-gray-900 text-white">
+  <section id="contact" class="py-24 lg:py-32 bg-gray-900 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-6">Request an Appraisal</h2>
-        <p class="text-lg text-gray-300">
+      <div class="max-w-3xl mx-auto text-center mb-20 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">Request an Appraisal</h2>
+        <p class="text-xl text-gray-300">
           Contact us to discuss your commercial appraisal needs. We'll respond within one business day.
         </p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 stagger-children">
         <!-- Contact Form -->
-        <div class="bg-white text-gray-900 p-8 rounded-2xl">
+        <div class="bg-white text-gray-900 p-8 lg:p-10 rounded-2xl shadow-2xl shadow-black/20">
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
             <input type="hidden" name="form-name" value="contact" />
             <p class="hidden">
@@ -434,7 +510,7 @@ import Layout from '../layouts/Layout.astro';
 
             <button
               type="submit"
-              class="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 btn-hover"
+              class="w-full bg-blue-600 text-white py-4 px-6 rounded-xl font-semibold hover:bg-blue-700 btn-hover shadow-lg shadow-blue-600/30 text-lg"
             >
               Submit Request
             </button>

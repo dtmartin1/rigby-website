@@ -112,6 +112,66 @@ const { title, description = "Rigby & Company provides expert commercial apprais
       document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => {
         observer.observe(el);
       });
+
+      // Services accordion
+      document.querySelectorAll('.service-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.service-item');
+          const content = item.querySelector('.service-content');
+          const icon = btn.querySelector('svg');
+
+          const isOpen = !content.classList.contains('hidden');
+
+          if (isOpen) {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+          } else {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
+
+      // Features scroll - dot indicators & auto-scroll
+      const scrollContainer = document.getElementById('features-scroll');
+      const dots = document.querySelectorAll('#features-dots button');
+
+      if (scrollContainer && dots.length && window.innerWidth < 768) {
+        const cards = scrollContainer.querySelectorAll('[data-index]');
+
+        // Update dots on scroll
+        const scrollObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const index = entry.target.dataset.index;
+              dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-blue-600', i == index);
+                dot.classList.toggle('bg-gray-300', i != index);
+              });
+            }
+          });
+        }, { root: scrollContainer, threshold: 0.5 });
+
+        cards.forEach(card => scrollObserver.observe(card));
+
+        // Dot click to scroll
+        dots.forEach(dot => {
+          dot.addEventListener('click', () => {
+            const index = dot.dataset.dot;
+            cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          });
+        });
+
+        // Auto-scroll to second card after 3s (once only, if user hasn't scrolled)
+        let userHasScrolled = false;
+        scrollContainer.addEventListener('scroll', () => { userHasScrolled = true; }, { once: true });
+
+        setTimeout(() => {
+          if (!userHasScrolled) {
+            cards[1]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        }, 3000);
+      }
     </script>
   </body>
 </html>
