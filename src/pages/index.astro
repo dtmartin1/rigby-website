@@ -428,7 +428,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 stagger-children">
         <!-- Contact Form -->
         <div class="bg-white text-gray-900 p-8 lg:p-10 rounded-2xl shadow-2xl shadow-black/20">
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
             <input type="hidden" name="form-name" value="contact" />
             <p class="hidden">
               <label>Don't fill this out: <input name="bot-field" /></label>
@@ -510,11 +510,45 @@ import Layout from '../layouts/Layout.astro';
 
             <button
               type="submit"
+              id="contact-submit"
               class="w-full bg-blue-600 text-white py-4 px-6 rounded-xl font-semibold hover:bg-blue-700 btn-hover shadow-lg shadow-blue-600/30 text-lg"
             >
               Submit Request
             </button>
           </form>
+          <div id="contact-success" class="hidden text-center py-12">
+            <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thank you!</h3>
+            <p class="text-gray-600">We've received your request and will be in touch shortly.</p>
+          </div>
+          <script>
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const btn = document.getElementById('contact-submit');
+              btn.textContent = 'Sending...';
+              btn.disabled = true;
+              try {
+                const response = await fetch('/', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: new URLSearchParams(new FormData(form)).toString()
+                });
+                if (response.ok) {
+                  form.classList.add('hidden');
+                  document.getElementById('contact-success').classList.remove('hidden');
+                } else {
+                  btn.textContent = 'Submit Request';
+                  btn.disabled = false;
+                  alert('Something went wrong. Please try again.');
+                }
+              } catch {
+                btn.textContent = 'Submit Request';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+              }
+            });
+          </script>
         </div>
 
         <!-- Contact Info -->
